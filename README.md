@@ -6,6 +6,25 @@
 
 Runs 100% locally on **Windows, macOS and Linux** — or 24/7 on a cheap VPS. A self-hosted alternative to subscription bot platforms: your bot, your server, your keys, your profits.
 
+## Installation & Quick Start
+
+Requirements: **Python 3.10+** (works on Windows, macOS, Linux).
+
+```bash
+cd backend
+pip install -r requirements.txt
+python run.py
+```
+
+Open **http://127.0.0.1:8000** (or just run `start.bat` from the repo root on Windows).
+
+On first launch the server creates a default **paper account**: go to *Exchange Accounts* and create an account (Paper + USDT balance), then create your first bot in *Bots → New Bot*. Optional native SDKs:
+
+```bash
+pip install hyperliquid-python-sdk   # Hyperliquid: API wallet private key + main wallet address
+pip install dydx-v4-client           # dYdX v4: mnemonic
+```
+
 ## Dashboard Overview
 
 ![CEXTrader demo — automated crypto trading bot dashboard with grid bot, DCA bot, live candlestick chart, order book and PnL](demo.gif)
@@ -115,25 +134,6 @@ Built-in **crypto risk management** on every bot:
 - **Backtest** - configure → statistics + equity chart with trade markers + trades table.
 - **Accounts** - paper/live accounts, connection test, editable balances.
 - **Logs** - filterable stream of all events.
-
-## Installation & Quick Start
-
-Requirements: **Python 3.10+** (works on Windows, macOS, Linux).
-
-```bash
-cd backend
-pip install -r requirements.txt
-python run.py
-```
-
-Open **http://127.0.0.1:8000** (or just run `start.bat` from the repo root on Windows).
-
-On first launch the server creates a default **paper account**: go to *Exchange Accounts* and create an account (Paper + USDT balance), then create your first bot in *Bots → New Bot*. Optional native SDKs:
-
-```bash
-pip install hyperliquid-python-sdk   # Hyperliquid: API wallet private key + main wallet address
-pip install dydx-v4-client           # dYdX v4: mnemonic
-```
 
 ## Project Structure
 
